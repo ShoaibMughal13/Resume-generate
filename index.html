@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <h2>Resume Form</h2>
+
+    <form class="resume-form" id="resumeForm">
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="fatherName">Father's Name:</label>
+            <input type="text" id="fatherName" name="fatherName" placeholder="Enter your father's name" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </fieldset>
+
+        <!-- Contact Information -->
+        <fieldset>
+            <legend>Contact Information</legend>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+        </fieldset>
+
+        <!-- Education -->
+        <fieldset>
+            <legend>Education</legend>
+
+            <label for="highestDegree">Highest Degree:</label>
+            <input type="text" id="degree" name="highestDegree" placeholder="Enter your highest degree" required>
+
+            <label for="institution">Institution:</label>
+            <input type="text" id="institution" name="institution" placeholder="Enter the name of your institution" required>
+
+            <label for="year">Year of Graduation:</label>
+            <input type="number" id="year" name="year" placeholder="Enter the year of graduation" required>
+        </fieldset>
+
+        <!-- Skills -->
+        <fieldset>
+            <legend>Skills</legend>
+
+            <label for="skills">List Your Skills:</label>
+            <textarea id="skills" name="skills" placeholder="E.g., Web Development, Graphic Design, JavaScript, etc." required></textarea>
+        </fieldset>
+
+        <!-- Work Experience -->
+        <fieldset>
+            <legend>Work Experience</legend>
+
+            <label for="company">Most Recent Employer:</label>
+            <input type="text" id="company" name="company" placeholder="Enter your recent employer's name">
+
+            <label for="role">Job Role:</label>
+            <input type="text" id="role" name="role" placeholder="Enter your job role">
+
+            <label for="experience">Years of Experience:</label>
+            <input type="number" id="experience" name="experience" placeholder="Enter the number of years you have worked">
+        </fieldset>
+
+    
+            <!-- Button to upload Profile Picture -->
+            <div class="form-group">
+                <label for="profilePic">Upload Profile Picture:</label>
+                <input type="file" id="profilePic" accept="image/*" onchange="previewImage(event)">
+            </div>
+        
+            <!-- Button to upload Certificates -->
+            <!-- <div class="form-group">
+                <label for="certificates">Upload Certificates:</label>
+                <input type="file" id="certificates" accept="application/pdf" multiple>
+            </div> -->
+        
+           
+        
+        
+        <!-- Preview of the uploaded profile picture -->
+        <img id="profilePreview" style="display:none; width:150px; height:150px; border-radius:50%; margin-top:10px;" alt="Profile Picture Preview">
+        
+
+        <!-- Submit Button -->
+        <input type="button" class="submit-btn" value="Create Resume" onclick="generateCV()">
+    </form>
+
+     <!-- CV Display Template -->
+     <div class="cv-template" id="cvTemplate">
+        <h2>Resume</h2>
+        <div class="cv-picture-box">
+            <img id="cvDisplayPicture" src="" alt="Profile Picture" style="display:none;">
+        </div>
+
+        <div class="cv-section">
+            <h3>Personal Information</h3>
+            <p><strong>Full Name:</strong> <span id="cvName"></span></p>
+            <p><strong>Father's Name:</strong> <span id="cvFatherName"></span></p>
+            <p><strong>Date of Birth:</strong> <span id="cvDob"></span></p>
+        </div>
+
+        <div class="cv-section">
+            <h3>Contact Information</h3>
+            <p><strong>Email:</strong> <span id="cvEmail"></span></p>
+            <p><strong>Phone Number:</strong> <span id="cvPhone"></span></p>
+            <p><strong>Address:</strong> <span id="cvAddress"></span></p>
+        </div>
+
+        <div class="cv-section">
+            <h3>Education</h3>
+            <p><strong>Highest Degree:</strong> <span id="cvDegree"></span></p>
+            <p><strong>Institution:</strong> <span id="cvInstitution"></span></p>
+            <p><strong>Year of Graduation:</strong> <span id="cvYear"></span></p>
+        </div>
+
+        <div class="cv-section">
+            <h3>Skills</h3>
+            <p><strong>Skills:</strong> <span id="cvSkills"></span></p>
+        </div>
+
+        <div class="cv-section">
+            <h3>Work Experience</h3>
+            <p><strong>Most Recent Employer:</strong> <span id="cvCompany"></span></p>
+            <p><strong>Job Role:</strong> <span id="cvRole"></span></p>
+            <p><strong>Years of Experience:</strong> <span id="cvExperience"></span></p>
+        </div>
+
+        <!-- Print CV Button -->
+        <button class="print-btn" onclick="window.print()">Print CV</button>
+    </div>
+
+
+    <script src="App.js"></script>
+</body>
+</html>

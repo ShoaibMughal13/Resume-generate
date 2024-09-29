@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form Container */
+.resume-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 2px solid #007bff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* CV Template */
+.cv-template {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url('background-design.png'); /* Background image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Style for Picture Box */
+.cv-picture-box {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #333;
+}
+
+.cv-picture-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 10px;
+    color: #333;
+}
+
+.cv-section {
+    margin-bottom: 20px;
+}
+
+.cv-section h3 {
+    color: #444;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.cv-section p {
+    margin: 5px 0;
+}
+
+/* Style for Print Button */
+.print-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.print-btn:hover {
+    background-color: #0056b3;
+}
+
+.cv-template{
+    display: none;
+}
+
+/* Print-specific Styles */
+@media print {
+    body {
+        background-color: white;
+    }
+    .resume-form, .submit-btn {
+        display: none; /* Hide the form and buttons */
+    }
+    .cv-template {
+        box-shadow: none;
+    }
+    .print-btn {
+        display: none;
+    }
+}
+
+
